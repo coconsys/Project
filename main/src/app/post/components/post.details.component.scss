@@ -1,0 +1,12 @@
+.post-details-content {
+  max-width: 500px;
+  min-width: 200px;
+  max-height: calc(100vh - 100px);
+  .break-text {
+    overflow-wrap: break-word;
+  }
+  
+  .author-text {
+    text-align: right;
+  }
+}

@@ -1,0 +1,32 @@
+<mat-card class="post-body">
+  <mat-card-header>
+    <mat-card-title class="title">
+      <div>{{ postData.title || "Title missing." }}</div>
+      <button
+        (click)="onDeleteClick()"
+        class="button"
+        mat-icon-button
+        color="primary"
+      >
+        <fa-icon
+          [icon]="faTrash"
+          size="2x"
+          [styles]="{ stroke: '#a33b45', color: '#a33b45' }"
+        ></fa-icon>
+      </button>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="text">{{ postData.text || "Text missing." }}</p>
+  </mat-card-content>
+  <mat-card-actions class="actions">
+    <button
+      mat-flat-button
+      class="dark-button text-white"
+      (click)="openDialog()"
+    >
+      More...
+    </button>
+    <div>Author: <span class="bold">{{ postData.author || "Author missing" }}</span></div>
+  </mat-card-actions>
+</mat-card>

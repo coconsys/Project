@@ -1,0 +1,14 @@
+<div *ngIf="!isDataReady" class="center-spinner">
+  <mat-spinner color="warn"></mat-spinner>
+</div>
+<div *ngIf="isDataReady" class="post-container">
+  <div class="post-scrollable">
+    <div class="posts-container" *ngFor="let post of postData">
+      <app-post
+        class="post"
+        (onDelete)="handleDeleteClick($event)"
+        [postData]="post"
+      ></app-post>
+    </div>
+  </div>
+</div>

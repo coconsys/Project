@@ -1,0 +1,119 @@
+<div class="contact-us-container">
+  <div class="left-side-wrapper">
+    <mat-card class="call-us-card">
+      <mat-card-header>
+        <mat-card-title>Call us directly at: </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="text-container">
+        <span class="bold"> +48 666 666 666 </span>
+        <span> Adress 1416 Western Park Vlg</span>
+        <span> Jamestown, Nd, 58401 </span>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="chat-card">
+      <mat-card-header class="chat-card-header">
+        <mat-card-title>Chat with our team</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="chat-card-content">
+        <button
+          class="mr-10 dark-button"
+          mat-fab
+          routerLink="/404"
+          routerLinkActive="active"
+        >
+          <fa-icon [icon]="faComment"></fa-icon>
+        </button>
+        Press to go to chat.
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="right-side-wrapper">
+    <mat-card class="contact-us-card">
+      <mat-card-header>
+        <mat-card-title>Book a Meeting</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form
+          #contactUsFormDirective="ngForm"
+          [formGroup]="contactUsForm"
+          class="contact-us-form"
+          (ngSubmit)="onSubmit(contactUsFormDirective)"
+        >
+          <mat-form-field class="contact-us-form-element">
+            <mat-label>First name</mat-label>
+            <input matInput formControlName="firstName" />
+            <mat-error
+              *ngIf="contactUsForm.controls['firstName'].hasError('required')"
+            >
+              Please enter your first name
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="contact-us-form-element">
+            <mat-label>Last name</mat-label>
+            <input matInput formControlName="lastName" />
+            <mat-error
+              *ngIf="contactUsForm.controls['firstName'].hasError('required')"
+            >
+              Please enter your last name
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="contact-us-form-element">
+            <mat-label>Phone number</mat-label>
+            <app-phone-input formControlName="phoneNumber"></app-phone-input>
+            <mat-error
+              *ngIf="contactUsForm.controls['phoneNumber'].hasError('required')"
+            >
+              Please enter your phone number
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="contact-us-form-element">
+            <mat-label>Email</mat-label>
+            <input
+              type="email"
+              matInput
+              formControlName="email"
+              placeholder="example1@gmail.com"
+            />
+            <mat-error
+              *ngIf="
+                contactUsForm.controls['email'].hasError('email') &&
+                !contactUsForm.controls['email'].hasError('required')
+              "
+            >
+              Please enter a valid email address
+            </mat-error>
+            <mat-error
+              *ngIf="contactUsForm.controls['email'].hasError('required')"
+            >
+              Email is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field
+            appearance="outline"
+            class="contact-us-form-additional-text"
+          >
+            <mat-label>How can we help you?</mat-label>
+            <textarea
+              matInput
+              placeholder="Placeholder"
+              formControlName="helpYouOutMessage"
+              class="text-box-container"
+            ></textarea>
+          </mat-form-field>
+          <div class="contact-us-form-buttons">
+            <button mat-raised-button class="dark-button text-white" type="submit">
+              Send form
+            </button>
+            <button
+              mat-raised-button
+              type="button"
+              (click)="onClearClick(contactUsFormDirective)"
+            >
+              Clear
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+
+  .form-element {
+    width: 300px;
+    align-self: center;
+    margin: 5px 5px 5px 5px;
+
+    @media screen and (max-width: 420px) {
+      width: 260px;
+    }
+  }
+
+  .text {
+    min-height: 200px !important;
+    max-height: 400px !important;
+  }
+
+  .button-container {
+    align-self: center;
+
+    .button {
+      margin: 5px 5px 5px 5px;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.contact-us-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  @media screen and (max-width: 959px) {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .left-side-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 700px;
+    margin-right: 40px;
+    @media screen and (max-width: 959px) {
+      margin-right: 0px;
+      align-items: center;
+      height: 500px;
+    }
+    .call-us-card {
+      height: 200px;
+      width: 350px;
+      font-size: 16px;
+      @media screen and (max-width: 420px) {
+        width: 280px;
+      }
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+        justify-content: space-evenly;
+      }
+    }
+
+    .chat-card {
+      height: 150px;
+      .chat-card-header {
+        margin-bottom: 20px;
+      }
+
+      .chat-card-content {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .right-side-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 700px;
+    margin-left: 40px;
+    @media screen and (max-width: 959px) {
+      align-items: center;
+      margin-left: 0px;
+      height: 500px;
+    }
+
+    .contact-us-card {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media screen and (max-width: 420px) {
+        width: 270px;
+      }
+      .contact-us-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .contact-us-form-element {
+          margin-bottom: 5px;
+          width: 200px;
+        }
+        .contact-us-form-additional-text {
+          width: 300px;
+          @media screen and (max-width: 420px) {
+            width: 270px;
+          }
+          .text-box-container {
+            max-height: 100px;
+          }
+        }
+
+        .contact-us-form-buttons {
+          display: flex;
+          flex-direction: row;
+
+          button {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

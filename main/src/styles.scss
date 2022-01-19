@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.bold {
+    font-weight: bold;
+}
+
+.mr-10 {
+    margin-right: 10px !important;
+}
+.mr-5 {
+    margin-right: 5px !important;
+}
+
+.center-spinner {
+    height: calc(100vh - 100px);
+    width: 100vw;
+    display: flex; // make us of Flexbox
+    align-items: center; // does vertically center the desired content
+    justify-content: center; // horizontally centers single line items
+    text-align: center;
+}
+
+.text-white {
+    color: white
+}
+
+.text-red {
+    color: #a33b45;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.dark-button {
+    background-color:#232925!important ;
+  }
+
+.mat-card.mat-focus-indicator {
+    background-color: #E1E2EF
+    // background: linear-gradient(to bottom right, #a2a3a2 0%, #bfd5e2 51%);
+}

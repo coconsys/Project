@@ -1,0 +1,71 @@
+<div class="navbar-container">
+  <div class="hamburger-container">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <fa-icon
+        [icon]="faBars"
+        size="2x"
+        [styles]="{ stroke: 'white', color: 'white' }"
+      ></fa-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/posts" routerLinkActive="active">
+          <fa-icon class="mr-5" [icon]="buttonLogos.posts" [styles]="{ stroke: 'black', color: 'black' }"></fa-icon>
+          <span>Posts</span>
+      </button>
+      <button mat-menu-item routerLink="/add-post" routerLinkActive="active">
+        <fa-icon class="mr-5" [icon]="buttonLogos.addPost" [styles]="{ stroke: 'black', color: 'black' }"></fa-icon>
+        <span>Add Post</span>
+      </button>
+      <button mat-menu-item routerLink="/about-us" routerLinkActive="active">
+        <fa-icon class="mr-5" [icon]="buttonLogos.aboutUs" [styles]="{ stroke: 'black', color: 'black' }"></fa-icon>
+        <span>About us</span>
+      </button>
+      <button mat-menu-item routerLink="/contact-us" routerLinkActive="active">
+        <fa-icon class="mr-5" [icon]="buttonLogos.contactUs" [styles]="{ stroke: 'black', color: 'black' }"></fa-icon>
+        <span>Contact us</span>
+      </button>
+    </mat-menu>
+  </div>
+  <img class="navbar-img" [src]="leftIcon" />
+  <div class="button-container">
+    <button
+      class="button text-white"
+      mat-button
+      routerLink="/posts"
+      routerLinkActive="active"
+    >
+    <fa-icon class="mr-5" [icon]="buttonLogos.posts" [styles]="{ stroke: 'white', color: 'white' }"></fa-icon>
+
+      Posts
+    </button>
+    <button
+      class="button text-white"
+      mat-button
+      routerLink="/add-post"
+      routerLinkActive="active"
+    >
+    <fa-icon class="mr-5" [icon]="buttonLogos.addPost" [styles]="{ stroke: 'white', color: 'white' }"></fa-icon>
+
+      Add Post
+    </button>
+    <button
+      class="button text-white"
+      mat-button
+      routerLink="/about-us"
+      routerLinkActive="active"
+    >
+    <fa-icon class="mr-5" [icon]="buttonLogos.aboutUs" [styles]="{ stroke: 'white', color: 'white' }"></fa-icon>
+
+      About us
+    </button>
+    <button
+      class="button text-white"
+      mat-button
+      routerLink="/contact-us"
+      routerLinkActive="active"
+    >
+    <fa-icon class="mr-5" [icon]="buttonLogos.contactUs" [styles]="{ stroke: 'white', color: 'white' }"></fa-icon>
+      Contact us
+    </button>
+  </div>
+</div>

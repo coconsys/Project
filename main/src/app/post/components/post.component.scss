@@ -1,0 +1,42 @@
+.post-body {
+  width: 600px;
+  height: 245px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media screen and (max-width: 700px) {
+    width: 400px;
+  }
+  @media screen and (max-width: 420px) {
+    width: 270px;
+  }
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
+    @media screen and (max-width: 700px) {
+      width: 400px;
+    }
+    @media screen and (max-width: 420px) {
+      width: 270px;
+    }
+  }
+
+  .text {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

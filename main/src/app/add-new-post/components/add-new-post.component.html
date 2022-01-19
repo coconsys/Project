@@ -1,0 +1,54 @@
+<form
+  class="form-container"
+  #addNewPostFormDirective="ngForm"
+  [formGroup]="addPostForm"
+  (ngSubmit)="onAddClick(addNewPostFormDirective)"
+>
+  <mat-form-field class="form-element" appearance="outline">
+    <mat-label>Author</mat-label>
+    <mat-select formControlName="author" placeholder="Placeholder" name="author">
+      <mat-option value="Anna">Anna</mat-option>
+      <mat-option  value="Armin">Armin</mat-option>
+      <mat-option  value="Jackson">Jackson</mat-option>
+    </mat-select>
+    <mat-error *ngIf="addPostForm.controls['author'].hasError('required')">
+      Please select author
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="form-element" appearance="outline">
+    <mat-label>Title</mat-label>
+    <input formControlName="title" matInput placeholder="Placeholder" />
+    <mat-error *ngIf="addPostForm.controls['title'].hasError('required')">
+      Please enter your title
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="form-element" appearance="outline">
+    <mat-label>Text</mat-label>
+    <textarea
+      formControlName="text"
+      class="text"
+      matInput
+      placeholder="Placeholder"
+    ></textarea>
+    <mat-error *ngIf="addPostForm.controls['text'].hasError('required')">
+      Please enter your text
+    </mat-error>
+  </mat-form-field>
+  <div class="button-container">
+    <button
+      class="button dark-button text-white"
+      mat-raised-button
+      type="submit"
+    >
+      Add
+    </button>
+    <button
+      class="button dark-button text-red"
+      mat-raised-button
+      type="button"
+      (click)="onCancelClick(addNewPostFormDirective)"
+    >
+      Cancel
+    </button>
+  </div>
+</form>

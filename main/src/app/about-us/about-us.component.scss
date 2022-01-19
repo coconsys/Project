@@ -1,0 +1,53 @@
+.about-us-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding-top: 100px;
+  @media screen and (max-width: 959px) {
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .about-us-center-card {
+    padding-right: 50px;
+    padding-left: 50px;
+    width: 300px;
+
+    @media screen and (max-width: 959px) {
+      padding-right: 0px;
+      padding-left: 0px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .about-us-card-height{
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-us-side-card {
+    padding-top: 100px;
+    width: 300px;
+    height: 260px;
+    @media screen and (max-width: 959px) {
+      padding-top: 0px;
+    }
+  }
+
+  .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    .avatar-img {
+      height: 100px;
+      border-radius: 50%;
+
+    }
+  }
+}
